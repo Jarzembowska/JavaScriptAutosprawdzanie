@@ -14,44 +14,61 @@
 
   > - większe od
   < - mniejsze od>= - większe lub równe
-    <= - mniejsze lub równe const a=2; const b=5; console.log(a> b); // false
+    <= - mniejsze lub równe <!-- -->
+      PRZYKŁAD
+      const a=2; const b=5;
+      console.log(a> b); // false
       console.log(b > a); // true
       console.log(a >= b); // false
       console.log(b >= a); // true
 
+      <!--  -->
+      console.log(a < b); // true <!-- -->
+        console.log(b < a); // false <!-- -->
+          console.log(a <=b); // true <!-- -->
+            console.log(b <=a); // false <!-- ZADANIE -->
+              ZADANIE
+              Funkcja isAdult posiada jeden parametr age (wiek). Przypisz zmiennej passed wartość zwróconą przez
+              sprawdzenie czy użytkownik jest pełnoletni, tzn czy wartość parametru age jest większa lub równa 18.
+              Następnie
+              zwróć zmienną passed.
 
-      console.log(a < b); // true console.log(b < a); // false console.log(a <=b); // true console.log(b <=a); // false
-        ZADANIE Funkcja isAdult posiada jeden parametr age (wiek). Przypisz zmiennej passed wartość zwróconą przez
-        sprawdzenie czy użytkownik jest pełnoletni, tzn czy wartość parametru age jest większa lub równa 18. Następnie
-        zwróć zmienną passed. TESTY Zadeklarowano funkcję isAdult(age) Wykorzystano operator>=
-        Wywołanie isAdult(20) zwraca true
-        Wywołanie isAdult(14) zwraca false
-        Wywołanie isAdult(8) zwraca false
-        Wywołanie isAdult(37) zwraca true
+              <!-- TESTY  -->
+              TESTY
+              Zadeklarowano funkcję isAdult(age) Wykorzystano operator>=
+              Wywołanie isAdult(20) zwraca true
+              Wywołanie isAdult(14) zwraca false
+              Wywołanie isAdult(8) zwraca false
+              Wywołanie isAdult(37) zwraca true
 
-        <script>
+              <script>
 
-          // KOD PRZED ZMIANĄ
+                // KOD PRZED ZMIANĄ
+                // function isAdult(age) {
+                //   // Change code below this line
+                //   const passed = 
+                //   // Change code above this line
+                //   return passed;
+                // }
 
 
+                //KOD PO ZMIANIE
 
-          //KOD PO ZMIANIE
-
-          function isAdult(age) {
-            // Change code below this line
-            const passed = age >= 18;
-            // console.log(20);
-            // console.log(14);
-            // console.log(8);
-            // console.log(37);
-            // Change code above this line
-            return passed;
-          }
-          console.log(isAdult(20)); // true
-          console.log(isAdult(14)); // false
-          console.log(isAdult(8)); // false
-          console.log(isAdult(37)); // true
-        </script>
+                function isAdult(age) {
+                  // Change code below this line
+                  const passed = age >= 18;
+                  // console.log(20);
+                  // console.log(14);
+                  // console.log(8);
+                  // console.log(37);
+                  // Change code above this line
+                  return passed;
+                }
+                console.log(isAdult(20)); // true
+                console.log(isAdult(14)); // false
+                console.log(isAdult(8)); // false
+                console.log(isAdult(37)); // true
+              </script>
 </body>
 
 </html>

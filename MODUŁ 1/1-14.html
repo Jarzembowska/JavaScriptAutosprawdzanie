@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  "Luźne" (loose) operatory == i != mogą dokonywać zmiany typów podczas porównywania wartości przez co ich przydatność
+  jest ograniczona i może prowadzić do nieprzewidzianych błędów. Używanie ich jest ogólnie złą praktyką zwłaszcza przez
+  początkujących.
+
+  // ❌ Źle, wartości nie zgadzają się typami i następują niekoniecznie poprawne porównania
+  console.log(5 == "5"); // true
+  console.log(5 != "5"); // false
+  console.log(1 == true); // true
+  console.log(1 != true); // false
+  Dlatego dla sprawdzenia równości lub nierówności dwóch wartości wykorzystywane są operatory === (ścisła równość) i !==
+  (ścisła nierówność), które nie próbują zrównać typów porównywanych zmiennych.
+
+  // ✅ Dobrze, nie następuje rzutowanie typów
+  console.log(5 === "5"); // false
+  console.log(5 === 5); // true
+  console.log(5 !== "5"); // true
+  console.log(5 !== 5); // false
+  console.log(1 === true); // false
+  console.log(1 !== true); // true
+
+
+  ZADANIE
+  Funkcja isValidPassword(password) porównuje hasło zapisane wcześniej z tym podanym jako argument (wartość parametru
+  password) i zwraca wynik sprawdzenia - watość boolowską true albo false. Zmienna SAVED_PASSWORD przechowuje wartość
+  zapisanego wcześniej hasła.
+
+  Przypisz zmiennej isMatch wynik porównania wprowadzonego i zapisanego wcześniej hasła. Rezultatem wyrażenia
+  sprawdzenia powinno być true, jeśli wartości zgadzają się i false, jeśli nie.
+
+  TESTY
+  Zadeklarowano funkcję isValidPassword(password)
+  W wyrażeniu sprawdzenia haseł wykorzystuje się operator ===
+  Wywołanie isValidPassword("mangodab3st") zwraca false
+  Wywołanie isValidPassword("kiwirul3z") zwraca false
+  Wywołanie isValidPassword("jqueryismyjam") zwraca true
+
+
+  <script>
+    // KOD PRZED ZMIANĄ
+    // function isValidPassword(password) {
+    //   const SAVED_PASSWORD = `jqueryismyjam`;
+    //   // Change code below this line
+    //   const isMatch = ;
+
+    //   //Change code above this line
+    //   return isMatch;
+    // }
+
+    // KOD PO ZMIANIE
+    function isValidPassword(password) {
+      const SAVED_PASSWORD = 'jqueryismyjam';
+      // Change code below this line
+      const isMatch = (password === SAVED_PASSWORD);
+      // console.log(`mangodab3st`);
+      // console.log(`kiwirul3z`);
+      // console.log(`jqueryismyjam`);
+
+      // Change code above this line
+      return isMatch;
+
+    }
+    console.log(isValidPassword("mangodab3st"));
+    console.log(isValidPassword("kiwirul3z"));
+    console.log(isValidPassword("jqueryismyjam"));
+
+  </script>
+</body>
+
+</html>
