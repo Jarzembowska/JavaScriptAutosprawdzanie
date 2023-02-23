@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  ZADANIE: MAGAZYN TOWARÓW
+  Funkcja checkStorage(available, ordered) sprawdza możliwość złożenia zamówienia i zwraca string z rezultatem.
+  Deklarujemy w nije dwa parametry:
+
+  available - całkowita ilość sztuk towaru w magazynie
+  ordered - ilość sztuk towaru w zamówieniu
+  Wykorzystując warunki if...else uzupełnij kod funkcji tak, aby:
+
+  Jeśli w zamówieniu wskazano liczbę przewyższającą ilość sztuk towaru w magazynie, w zmiennej message zapisujemy się
+  string "Not enough goods in stock!".
+  W przeciwnym razie do zmiennej message zapisujemy się string "Order is processed, our manager will contact you.".
+
+  TESTY
+  Zadeklarowano funkcje checkStorage(available, ordered).
+  Wywołanie checkStorage(100, 50) zwraca "Order is processed, our manager will contact you."
+  Wywołanie checkStorage(100, 130) zwraca "Not enough goods in stock!"
+  Wywołanie checkStorage(200, 20) zwraca "Order is processed, our manager will contact you."
+  Wywołanie checkStorage(200, 150) zwraca "Order is processed, our manager will contact you."
+  Wywołanie checkStorage(150, 180) zwraca "Not enough goods in stock!"
+
+
+
+
+  <script>
+
+    //KOD PRZED ZMIANĄ
+    // function checkStorage(available, ordered) {
+    //   let message;
+    //   // Change code below this line
+
+    //   // Change code above this line
+    //   return message;
+    // }
+
+
+    //KOD PO ZMIANIE
+    function checkStorage(available, ordered) {
+      let message;
+      // Change code below this line
+      if (available < ordered) {
+        message = `Not enough goods in stock!`;
+      }
+      else {
+        message = `Order is processed, our manager will contact you.`;
+      }
+      // console.log(100, 50);
+      // console.log(100, 130);
+      // console.log(200, 20);
+      // console.log(200, 150);
+      // console.log(150, 180);
+      // Change code above this line
+      return message;
+    }
+    console.log(checkStorage(100, 50)); //Order is processed, our manager will contact you.
+    console.log(checkStorage(100, 130)); //Not enough goods in stock!
+    console.log(checkStorage(200, 20)); //Order is processed, our manager will contact you.
+    console.log(checkStorage(200, 150)); //Order is processed, our manager will contact you.
+    console.log(checkStorage(150, 180)); //Not enough goods in stock!
+
+  </script>
+</body>
+
+</html>

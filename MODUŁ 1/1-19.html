@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  Konstrukcja `if...else` jest nieco ograniczona może sprawdzić i zareagować na spełnienie lub niespełnienie tylko
+  jednego warunku.
+  let cost;
+  const subscription = "pro";
+
+  if (subscription === "pro") {
+  cost = 100;
+  } else {
+  cost = 0;
+  }
+
+  console.log(cost); // 100
+  Blok else...if pozwala dodać po else jeszcze jeden operator if z warunkiem. Na końcu instrukcji może znajdować się
+  klasyczny blok else (bez kolejnego if-a), który wykona się tylko w wypadku, gdy żaden z warunków nie będzie
+  true/truthy.
+
+  let cost;
+  const subscription = "premium";
+
+  if (subscription === "free") {
+  cost = 0;
+  } else if (subscription === "pro") {
+  cost = 100;
+  } else if (subscription === "premium") {
+  cost = 500;
+  } else {
+  console.log(`Invalid subscription type - ${subscription}`);
+  }
+
+  console.log(cost); // 500
+  Podczas wykonywania takiego łańcucha, zatrzyma się on na pierwszym spełnionym (truthy) warunku. Kod znajdujący się w
+  niespełnionych blokach nie wykona się.
+
+
+  ZADANIE
+
+  Funkcja checkPassword(password) otrzymuje hasło użytkownika w parametrze password, sprawdza je pod względem zgodności
+  z hasłem administratora w zmiennej ADMIN_PASSWORD i zwraca wiadomość o rezultacie sprawdzenia, przechowywaną w
+  zmiennej message.
+
+  Jeśli argument dla parametru password wynosi null, oznacza to, że użytkownik anulował operację i w message zapisuje
+  się łańcuch "Canceled by user!".
+  Jeśli wartość parametru password jest zgodna z wartością ADMIN_PASSWORD, w zmiennej message przypisany zostaje łańcuch
+  "Welcome!".
+  Jeśli żaden z poprzednich warunków nie zostanie spełniony, w zmiennej message zapisuje się string "Access denied,
+  wrong password!".
+
+
+  TESTY
+
+  Zadeklarowano funkcję checkPassword(password)
+  Wywołanie checkPassword("mangohackzor") zwraca "Access denied, wrong password!"
+  Wywołanie checkPassword(null) zwraca "Canceled by user!"
+  Wywołanie checkPassword("polyhax") zwraca "Access denied, wrong password!"
+  Wywołanie checkPassword("jqueryismyjam") zwraca "Welcome!"
+
+  <script>
+
+    //KOD PRZED ZMIANĄ
+
+    //     function checkPassword(password) {
+    //   const ADMIN_PASSWORD = 'jqueryismyjam';
+    //   let message;
+
+    //   if () { // Change this line
+    //     message =  'Canceled by user!';
+    //   } else if () { // Change this line
+    //     message = 'Welcome!';
+    //   } else {
+    //     message = 'Access denied, wrong password!';
+    //   }
+
+    //   return message;
+    // }
+
+    //KOD PO ZMIANIE
+    function checkPassword(password) {
+      const ADMIN_PASSWORD = 'jqueryismyjam';
+      let message;
+
+      if (password === null) { // Change this line
+        message = 'Canceled by user!';
+      } else if (password === ADMIN_PASSWORD) { // Change this line
+        message = 'Welcome!';
+      } else {
+        message = 'Access denied, wrong password!';
+      }
+      // console.log(`mangohackzor`);
+      // console.log(null);
+      // console.log('polyhax');
+      // console.log('jqueryismyjam');
+      return message;
+    }
+    console.log(checkPassword("mangohackzor")); // Access denied, wrong password!
+    console.log(checkPassword(null)); //Canceled by user!
+    console.log(checkPassword("polyhax")); //Access denied, wrong password!
+    console.log(checkPassword("jqueryismyjam")); //Welcome!
+  </script>
+</body>
+
+</html>

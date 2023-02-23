@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  Rozgałęzienia (realizowane przez słowa kluczowe if...else) wykorzystywane są do wykonania innego kodu w zależności od
+  warunków. Zasada działania jest prosta – wynik wyrażenia w warunku bloku if ewaluowany (obliczany) jest i sprawdza się
+  czy jest true/truthy czy false/falsey.
+
+  if (warunek) {
+  // ciało if
+  } else {
+  // ciało else
+  }
+  Jeśli warunek sprowadza się do wartości true lub truthy, to wykonywany jest kod w nawiasie klamrowym następującym po
+  warunku, a kod w bloku else zostaje zignorowany.
+
+  let cost;
+  const subscription = "pro";
+
+  if (subscription === "pro") {
+  cost = 100;
+  } else {
+  cost = 0;
+  }
+
+  console.log(cost); // 100
+  Jeśli warunek sprowadza się do false/falsey, kod bloku if zostanie pominięty i wykonany zostanie kod w nawiasie
+  klamrowym po bloku else.
+
+  let cost;
+  const subscription = "free";
+
+  if (subscription === "pro") {
+  cost = 100;
+  } else {
+  cost = 0;
+  }
+
+  console.log(cost); // 0
+
+
+  ZADANIE
+
+  Dodaj sprawdzenie pełnoletności użytkownika, używając parametru age do warunku w instrukcji if
+
+  Jeśli użytkownik jest pełnoletni, powinien wykonywać się blok if i w zmiennej message zapisujemy string "You are an
+  adult".
+  W przeciwnym razie powinien wykonać się blok else i jako wartość zmiennej message zapisujemy "You are a minor".
+
+
+  TESTY
+  Zadeklarowane funkcję checkAge(age).
+  Do sprawdzenia wieku wykorzystuje się operator >=
+  Wywołanie checkAge(20) zwraca "You are an adult"
+  Wywołanie checkAge(8) zwraca "You are a minor"
+  Wywołanie checkAge(14) zwraca "You are an adult"
+  Wywołanie checkAge(38) zwraca "You are a minor"
+
+
+  <script>
+    //KOD PRZED ZMIANĄ
+
+    // function checkAge(age) {
+    //   let message;
+
+    //   if () { // Change this line
+    //     message = 'You are an adult';
+    //   } else {
+    //     message = 'You are a minor';
+    //   }
+
+    //   return message;
+    // }
+
+
+    //KOD PO ZMIANIE
+
+    function checkAge(age) {
+      let message;
+
+      if (age >= 18) { // Change this line
+        message = 'You are an adult';
+      } else {
+        message = 'You are a minor';
+      }
+      // console.log(20);
+      // console.log(8);
+      // console.log(14);
+      // console.log(38);
+
+      return message;
+    }
+
+    console.log(checkAge(20));
+    console.log(checkAge(8));
+    console.log(checkAge(14));
+    console.log(checkAge(38));
+  </script>
+</body>
+
+</html>

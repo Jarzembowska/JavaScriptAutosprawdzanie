@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  ZADANIE: MAGAZYN TOWARÓW 2.0
+
+
+  ZADANIE
+  Funkcja checkStorage(available, ordered) sprawdza możliwość złożenia zamówienia i zwraca wiadomość o rezultacie.
+  Deklarujemy dwa parametry:
+
+  available - dostępna ilość towarów w magazynie
+  ordered - ilość jednostek towaru w zamówieniu
+  Wykorzystując rozgałęzienia, uzupełnij kod funkcji tak, aby:
+
+  Jeżeli w zamówieniu jest zero sztuk towaru, to znaczy wartość parametru ordered jest równa 0, jako wartości zmiennej
+  message zapisujemy string "There are no products in the order!".
+  Jeżeli ilość towarów w zamówieniu jest większa niż ilość towarów dostępnych w magazynie, to w zmiennej message
+  zapisujemy string "Your order is too large, there are not enough items in stock!".
+  W przeciwnym razie w zmiennej message zapisujemy string "The order is accepted, our manager will contact you".
+
+
+
+  TESTY
+
+  Zadeklarowano funkcję checkStorage(available, ordered)
+  Wywołanie checkStorage(100, 50) zwraca "The order is accepted, our manager will contact you"
+  Wywołanie checkStorage(100, 130) zwraca "Your order is too large, there are not enough items in stock!"
+  Wywołanie checkStorage(70, 0) zwraca "There are no products in the order!"
+  Wywołanie checkStorage(200, 20) zwraca "The order is accepted, our manager will contact you"
+  Wywołanie checkStorage(200, 250) zwraca "Your order is too large, there are not enough items in stock!"
+  Wywołanie checkStorage(150, 0) zwraca "There are no products in the order!"
+
+
+
+  <script>
+    //KOD PRZED ZMIANĄ
+    // function checkStorage(available, ordered) {
+    //   let message;
+    //   // Change code below this line
+
+    //   // Change code above this line
+    //   return message;
+    // }
+
+
+    //KOD PO ZMIANIE
+
+    function checkStorage(available, ordered) {
+      let message;
+      // Change code below this line
+      if (ordered === 0) {
+        message = `There are no products in the order!`;
+      } else if (ordered > available) {
+        message = 'Your order is too large, there are not enough items in stock!';
+      } else {
+        message = `The order is accepted, our manager will contact you`;
+      }
+      // console.log(100, 50);
+      // console.log(100, 130);
+      // console.log(70, 0);
+      // console.log(200, 20);
+      // console.log(200, 250);
+      // console.log(150, 0);
+      // Change code above this line
+      return message;
+    }
+    console.log(checkStorage(100, 50)); //The order is accepted, our manager will contact you
+    console.log(checkStorage(100, 130)); //Your order is too large, there are not enough items in stock!
+    console.log(checkStorage(70, 0)); //There are no products in the order!
+    console.log(checkStorage(200, 20)); //The order is accepted, our manager will contact you
+    console.log(checkStorage(200, 250)); // Your order is too large, there are not enough items in stock!
+    console.log(checkStorage(150, 0)); //There are no products in the order!
+
+  </script>
+</body>
+
+</html>

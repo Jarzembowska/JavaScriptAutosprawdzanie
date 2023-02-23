@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  Złożone operatory przypisania (compound assignment operators) to skrócone zapisy pozwalające na wykorzystanie obecnej
+  wartości zmiennej w celu przypisania jej nowej wartości.
+
+  Chcemy zwiększyć wartość zmiennej age o 1 wobec jej poprzedniej wartości, imitując aktualizację wieku po urodzinach
+  użytkownika.
+
+  let age = 25;
+  // Klasyczny zapis
+  age = age + 1;
+  console.log(age); // 26
+  Na początku wykonywana jest pierwsza część wyrażenia, do obecnej wartości age (25) dodawane jest 1 i w wyniku tego
+  działania jako nowa wartość zapisywane jest 26
+
+  Wykonamy refaktoryzację powyższego kodu, wykorzystując złożony operator przypisania z dodawaniem.
+  let age = 25;
+  // += to złożony operator który dodaje do obecnej wartości zmiennej liczbę po prawej, jednocześnie zapisując wynik do
+  zmiennej
+  age += 1;
+  console.log(age); // 26
+
+  ZADANIE
+  Zamień wyrażenia ze standardowymi operatorami matematycznymi na złożone operatory przypisania - dodawanie,
+  odejmowanie, mnożenie i dzielenie.
+
+
+
+  TESTY
+  Wartość zmiennej a to 7
+  Wykorzystano operator +=
+  Wartość zmiennej b to 6
+  Wykorzystano operator -=
+  Wartość zmiennej c to 45
+  Wykorzystano operator *=
+  Wartość zmiennej d to 2
+  Wykorzystano operator /=
+
+  <script>
+    //KOD PRZED ZMIANĄ
+    // let a = 5;
+    // let b = 10;
+    // let c = 15;
+    // let d = 20;
+
+    // // Change code below this line
+
+    // a = a + 2;
+    // b = b - 4;
+    // c = c * 3;
+    // d = d / 10;
+
+    //KOD PO ZMIANIE
+    let a = 5;
+    let b = 10;
+    let c = 15;
+    let d = 20;
+
+    // Change code below this line
+    a += 2; // 7
+    b -= 4; // 6
+    c *= 3; // 45
+    d /= 10; // 2
+
+
+
+  </script>
+</body>
+
+</html>

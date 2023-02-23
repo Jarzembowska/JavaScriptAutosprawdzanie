@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  Operatory logiczne wykorzystywane są do sprawdzenia warunków z wieloma składowymi.
+
+  Operator && konwertuje operandy po lewej i prawej do wartości typu boolean i zwraca jeden z nich. Lewy operator, jeśli
+  jest on falsey i prawy w pozostałych przypadkach.
+
+  wyrażenie && wyrażenie
+  W następnym przykładzie oba warunki zwrócą true, dlatego wynikiem całego wyrażenia będzie true – zwrócona zostanie
+  wartość prawego operatora.
+
+  const age = 20;
+  console.log(age > 10 && age < 30); // true && true -> true
+    Jeżeli przynajmniej jeden z operandów jest falsey, rezultatem wyrażenia będzie ten operand.
+
+    const age = 50;
+    console.log(age > 10 && age < 30); // true && false -> false
+      console.log(age > 80 && age < 120); // false && true -> false
+        To znaczy logiczne "I" zatrzymuje się na fałszu i zwraca to, na czym się zatrzymało.
+
+        console.log(true && false); // false
+        console.log(false && true); // false
+        console.log(true && true); // true
+
+        console.log(3 && false); // false
+        console.log(false && 3); // false
+        console.log(3 && true); // true
+        console.log(true && 3); // 3
+
+
+        Warto wiedzieć
+
+        Zapamiętaj sześć wartości, które dla operatorów logicznych są falsy: `0`, `NaN`, `null`, `undefined`, pusty
+        string `""` lub `''` i sama wartośc boolean `false`. Absolutnie wszystko pozostałe jest truthy.
+
+        console.log(1 && 5); // true && true -> 5
+        console.log(5 && 1); // true && true -> 1
+        console.log(0 && 2); // false && true -> 0
+        console.log(2 && 0); // true && false -> 0
+        console.log("" && "Mango"); // false && true -> ''
+        console.log("Mango" && ""); // true && false -> ''
+        console.log("Mango" && "Poly"); // true && true -> 'Poly'
+        console.log("Poly" && "Mango"); // rue && true -> 'Mango'
+
+        ZADANIE
+        Funkcja isNumberInRange(start, end, number) sprawdza, czy liczba wpisuje się w przedział. Deklarujemy trzy
+        parametry:
+
+        number - liczba której przynależność do przedziału sprawdzamy
+
+        start - początek przedziału liczbowego
+
+        end - koniec przedziału liczbowego
+
+        Zadeklaruj zmienną isInRange o wartości wyrażenia logicznego które sprawdza czy number wpisuje się w przedział
+        liczbowy od start do end. Liczba będąca wartością number powinna być wyższa lub równa start i mniejsza lub równa
+        end. Rezultatem wyrażenia sprawdzania będzie wartość typu boolean true lub false.
+
+
+
+        TESTY
+
+
+
+
+        <script>
+          // KOD PRZED ZMIANĄ
+          function isNumberInRange(start, end, number) {
+            const isInRange = (number >= start && number <= end); // Change this line
+
+            return isInRange;
+          }
+
+
+          // KOD PO ZMIANIE
+          function isNumberInRange(start, end, number) {
+            const isInRange = (number >= start && number <= end); // Change this line
+
+            return isInRange;
+          }
+
+        </script>
+</body>
+
+</html>

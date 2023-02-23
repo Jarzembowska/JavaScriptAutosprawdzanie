@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  ZADANIE: SPRAWDZENIE BALANSU
+
+  Stanowisko sprzedaży droidów do wykonywania napraw jest coraz bliżej bycia gotowym do rozpoczęcia pracy, musimy
+  napisać program dla działu sprzedaży.
+
+  Funkcja makeTransaction(pricePerDroid, orderedQuantity, customerCredits) dokonuje transakcji sprzedaży droidów i
+  zwraca wiadomość o rezultacie operacji. Deklarujemy trzy parametry:
+
+  pricePerDroid - cena jednego droida
+  orderedQuantity - ilość zamówionych droidów
+  customerCredits - saldo środków na koncie klienta
+  Uzupełnij ją następującą funkcjonalnością:
+
+  Zadeklaruj zmienną totalPrice i przypisz jej całkowitą wartość zamówienia (ilość droidów pomnożona przez cenę jednego
+  droida)
+  Dodaj następującą logikę sprawdzającą czy klient jest w stanie zapłacić za zamówienie
+  jeśli kwota do zapłaty przewyższa ilość kredytów na koncie klienta, zapisz w zmiennej message string "Insufficient
+  funds!";
+  w przeciwnym wypadku, odejmij koszt zakupu z konta klienta i zapisz w zmiennej message wiadomość: "You ordered
+  <orderedQuantity> droids, you have <customerCredits> credits left".
+
+
+      TESTY
+      Zadeklarowano funkcję makeTransaction(pricePerDroid, orderedQuantity, customerCredits)
+      Wywołanie makeTransaction(3000, 5, 23000) zwraca "You ordered 5 droids, you have 8000 credits left"
+      Wywołanie makeTransaction(1000, 3, 15000) zwraca "You ordered 3 droids, you have 12000 credits left"
+      Wywołanie makeTransaction(5000, 10, 8000) zwraca "Insufficient funds!"
+      Wywołanie makeTransaction(2000, 8, 10000) zwraca "Insufficient funds!"
+      Wywołanie makeTransaction(500, 10, 5000) zwraca "You ordered 10 droids, you have 0 credits left"
+
+
+
+      <script>
+        //KOD PRZED ZMIANĄ
+        // function makeTransaction(pricePerDroid, orderedQuantity, customerCredits) {
+        //   let message;
+        //   // Change code below this line
+
+        //   // Change code above this line
+        //   return message;
+        // }
+
+
+        //KOD PO ZMIANIE
+
+        function makeTransaction(pricePerDroid, orderedQuantity, customerCredits) {
+          let message;
+          // Change code below this line
+          const totalPrice = pricePerDroid * orderedQuantity;
+          if (totalPrice > customerCredits) {
+            message = `Insufficient funds!`;
+          } else {
+            customerCredits -= totalPrice;
+            message = `You ordered ${orderedQuantity} droids, you have ${customerCredits} credits left`;
+          }
+          // console.log(3000, 5, 23000);
+          // console.log(1000, 3, 15000);
+          // console.log(5000, 10, 8000);
+          // console.log(2000, 8, 10000);
+          // console.log(500, 10, 5000);
+          // Change code above this line
+          return message;
+        }
+        console.log(makeTransaction(3000, 5, 23000)); // You ordered 5 droids, you have 8000 credits left
+        console.log(makeTransaction(1000, 3, 15000)); //You ordered 3 droids, you have 12000 credits left
+        console.log(makeTransaction(5000, 10, 8000)); //Insufficient funds!
+        console.log(makeTransaction(2000, 8, 10000)); //Insufficient funds!
+        console.log(makeTransaction(500, 10, 5000)); //You ordered 10 droids, you have 0 credits left
+
+      </script>
+
+</body>
+
+</html>
