@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  Ciągi szablonów są alternatywą dla konkatenacji czyli dodawania do siebie stringów, z wygodniejszą składnią. Ciąg
+  ujęty jest w znaki (grawis lub backtick) zamiast w cudzysłów podwójny lub pojedynczy i może zawierać zmienne, które są
+  wpisane są w nawiasy klamrowe i poprzedzone znakiem dolara, w następujący sposób:
+
+  ${nazwaZmiennej}`.
+
+  const guestName = "Mango";
+  const roomNumber = 207;
+  const greeting = `Witaj w ${guestName}, jesteś w pokoju numer ${roomNumber}`;
+
+  ZADANIE
+
+  Zadeklaruj zmienną message i przypisz jej wartość wiadomości o zakupie, string w formacie: You picked <productName>,
+    price per item is <pricePerItem> credits.
+
+      Użyj składni template literal / ciągu szablonów.
+
+      TESTY
+
+      Zadeklarowano zmienną productName.
+      Wartością zmiennej productName jest string 'Droid'.
+      Zadeklarowano zmienną pricePerItem.
+      Wartością zmiennej pricePerItem jest liczba 3500.
+      Zadeklarowano zmienną message.
+      Wartością zmiennej message jest string You picked Droid, price per item is 3500 credits.
+
+      <script>
+        // KOD PRZED ZMIANĄ
+        // const productName = "Droid";
+        // const pricePerItem = 3500;
+
+        // // Change code below this line
+
+        // KOD PO ZMIANIE
+        const productName = "Droid";
+        const pricePerItem = 3500;
+
+        // Change code below this line
+        const message = `You picked ${productName}, price per item is ${pricePerItem} credits`;
+      </script>
+</body>
+
+</html>

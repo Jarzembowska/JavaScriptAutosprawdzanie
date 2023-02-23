@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  Słowo kluczone return wykorzystuje się do przekazania wartości którą traktujemy jako "wynik" działania kodu w ciele
+  funkcji. Gdy interpreter napotka to słowo kluczowe, natychmiast zwracana jest wartość podana bezpośrednio po nim (w
+  tej samej linijce) i wykonywanie kodu funkcji kończy się. Kod znajdujący się w linijkach pod słowem return nie
+  zostanie wykonany i nazywa się go "unreachable". Słowo kluczowe return może być użyte jedynie w ciele funkcji.
+
+  function multiply(x, y, z) {
+  console.log("Kod do momentu wystąpienia słowa kluczowego return wykonuje się jak zwykle");
+
+  // Zwracamy wynik wyrażenia mnożenia
+  return x * y * z;
+
+  console.log("Ten string nigdy nie zostanie wypisany w konsoli ponieważ znajduje się pod return, inaczej mówiąc jest
+  unreachable");
+  }
+
+  // Rezultat wykonania funkcji można zapisać jako wartość nowo deklarowanej zmiennej
+  let result = multiply(2, 3, 5);
+  console.log(result); // 30
+
+  result = multiply(4, 8, 12);
+  console.log(result); // 384
+
+  result = multiply(17, 6, 25);
+  console.log(result); // 2550
+  Operator return bez następującej po nim w tej samej linijce wartości, zwraca wartość specjalną undefined. Przy
+  nieobecności return w ciele funkcji, ta również zwróci undefined.
+
+
+  ZADANIE
+
+  Uzupełnij kod funkcji add tak, aby zwracała wynik dodawania wartości trzech parametrów a, b i c.
+
+  TESTY
+
+  Zadeklarowano funkcję add(a, b, c)
+  W funkcji add znajduje się słowo kluczowe return
+  Wywołanie add(15, 27, 10) zwraca 52
+  Wywołanie add(10, 20, 30) zwraca 60
+  Wywołanie add(5, 10, 15) zwraca 30
+  Wywołanie funkcji z losowymi, prawidłowymi (liczbowymi) argumentami, zwraca prawidłową wartość stanowiącą sumę
+  podanych argumentów
+
+
+  <script>
+    // KOD PRZED ZMIANĄ
+
+
+    // KOD PO ZMIANIE
+
+    function add(a, b, c) {
+      // Change code below this line
+
+      return a + b + c;
+
+      // Change code above this line
+    }
+
+    add(2, 5, 8); // 15
+
+    console.log(add(15, 27, 10)); // 52
+    console.log(add(10, 20, 30)); // 60
+    console.log(add(5, 10, 15)); // 30
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  ZADANIE: TEMPLATE LITERALS 2.0
+
+  ZADANIE
+
+  Funkcja makeMessage(name, price) łączy i zwraca wiadomość o zakupie. Deklarujemy w niej dwa parametry:
+
+  name - nazwa towaru
+  price - cena towaru
+
+  Uzupełnij kod funkcji tak, aby w zmiennej message zapisywał się string "You picked <name>, price per item is <price>
+      credits". Wykorzystaj składnię template literals
+
+      Uwaga
+      Zwróć uwagę na to, że w kodzie nie ma wywołania funkcji makeMessage. Zaczynając od tego zadania, dalej sami
+      będziemy wywoływać twoje funkcje w testach i sprawdzać, jak działają. Rezultat naszego sprawdzania zobaczysz w
+      bloku Rezultaty pod edytorem kodu.
+
+
+      TESTY
+      Zadeklarowano funkcję makeMessage(name, price)
+      Wywołanie makeMessage('Radar', 6150) zwraca "You picked Radar, price per item is 6150 credits"
+      Wywołanie makeMessage('Scanner', 3500) zwraca "You picked Scanner, price per item is 3500 credits"
+      Wywołanie makeMessage('Reactor', 8000) zwraca "You picked Reactor, price per item is 8000 credits"
+      Wywołanie makeMessage('Engine', 4070) zwraca "You picked Engine, price per item is 4070 credits"
+
+
+
+      <script>
+        // KOD PRZED ZMIANĄ
+        // function makeMessage(name, price) {
+        //   //change code velow this line
+        //   const message = ;
+
+        //   // Change code above this line
+        //    return message;
+        // }
+
+        //KOD PO ZMIANIE
+        function makeMessage(name, price) {
+          // Change code below this line
+          const message = (`You picked ${name}, price per item is ${price} credits`);
+
+          // Change code above this line
+          return message;
+        };
+
+        console.log("Radar", 6150);
+        console.log("Scaner", 3500);
+        console.log(`Reactor`, 8000);
+        console.log(`Engine`, 4070);
+      </script>
+</body>
+
+</html>

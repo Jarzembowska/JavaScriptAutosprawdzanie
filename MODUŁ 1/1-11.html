@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  ZADANIE: OPERATORY MATEMATYCZNE 2.0
+
+  ZADANIE
+
+  Funkcja calculateTotalPrice oblicza i zwraca całkowitą sumę zakupu. Przyjmuje dwa parametry:
+
+  orderedQuantity - ilość sztuk towaru w zamówieniu;
+  pricePerItem - cena pojedynczej sztuki towaru.
+  Uzupełnij kod funkcji tak, aby w zmiennej totalPrice zapisywała się całkowita kwota zamówienia, w tym przypadku jest
+  to wynik mnożenia ilości towarów przez cenę pojedynczej sztuki.
+
+
+  TESTY
+  Zadeklarowana funkcja calculateTotalPrice (orderedQuantity, pricePerItem)
+  Wywołanie calculateTotalPrice(5, 100) zwraca 500
+  Wywołanie calculateTotalPrice(8, 60) zwraca 480
+  Wywołanie calculateTotalPrice(3, 400) zwraca 1200
+  Wywołanie calculateTotalPrice(1, 3500) zwraca 3500
+  Wywołanie calculateTotalPrice(12, 70) zwraca 840
+  Wywołanie funkcji z losowymi, ale prawidłowymi argumentami, zwraca poprawny wynik
+
+  <script>
+    // KOD PRZED ZMIANĄ
+    // function calculateTotalPrice(orderedQuantity, pricePerItem) {
+    //   // Change code below this line
+    //   const totalPrice = ;
+
+    //   // Change code above this line
+    //   return totalPrice;
+    // };
+
+
+    // KOD PO ZMIANIE
+    function calculateTotalPrice(orderedQuantity, pricePerItem) {
+      // Change code below this line
+      const totalPrice = orderedQuantity * pricePerItem;
+
+      // Change code above this line
+      return totalPrice;
+    };
+
+    console.log(calculateTotalPrice(5, 100)); //500
+    console.log(calculateTotalPrice(8, 60)); // 480
+    console.log(calculateTotalPrice(3, 400)); // 1200
+    console.log(calculateTotalPrice(1, 3500)); // 3500
+    console.log(calculateTotalPrice(12, 70)); // 840
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  Funkcja -
+  inaczej podprogram, to niezależna część kodu, przeznaczona do wielokrotnego wywoływania, bez potrzeby duplikowania
+  kodu. Powtarzalne instrukcje/fragmenty kodu najlepiej zapisywać jako funkcje ponieważ poprawia to czystość kodu i
+  pozwala na łatwiejszy refactoring (zmiany w kodzie mające na celu poprawę jego działania lub zastosowanie lepszych
+  praktyk). Funkcje wykorzystują parametry do modyfikacji swojego działania, mogą również zwracać wartości które
+  następnie mogą zostać przypisane do zmiennych i użyte w dalszych częściach naszego programu.". Metaforycznie możemy
+  wyobrazić sobie funkcję jako małą maszynę która w zależności od otrzymanych materiałów może wyprodukować jeden z
+  pożądanych przez nas rezultatów.
+
+  // 1. Zadeklarowanie funkcji multiply
+  function multiply() {
+  // Ciało funkcji
+  console.log("multiply function invocation");
+  }
+
+  // 2. Wywołanie (invocation) funkcji multiply
+  multiply(); // multiply function invocation
+  multiply(); // multiply function invocation
+  multiply(); // multiply function invocation
+  Zadeklarowanie funkcji rozpoczynamy od słowa kluczowego function, następnie podajemy nazwę naszej funkcji, najlepiej
+  jako czasownik odpowiadający na pytanie "co zrobić?". Kolejnym elementem jest para okrągłych nawiasów gdzie możemy
+  (nieobowiązkowo) wypisać parametry które przyjmuje nasza funkcja. Następny element to nawias klamrowy który otacza
+  instrukcje (kod) który ma wykonać się przy każdym wywołaniu funkcji.
+
+
+  ZADANIE
+  Zadeklaruj funkcję sayHi, w środku której dodaj console.log() podanym jako argument stringiem "Hello, this is my first
+  function!". Po zadeklarowaniu wywołaj funkcję sayHi.
+
+  TESTY
+
+  Zadeklarowana jest funkcja
+  Funkcji przypisano nazwę sayHi
+  W ciele funkcji sayHi znajduje się console.log("Hello, this is my first function!")
+  Wywołanie funkcji następuje po zadeklarowaniu sayHi
+
+  <script>
+    // KOD PRZED ZMIANĄ
+    // Change code below this line
+
+    // KOD PO ZMIANIE
+    // Change code below this line
+    function sayHi() {
+      console.log('Hello, this is my first function!');
+    }
+    sayHi();
+  </script>
+</body>
+
+</html>

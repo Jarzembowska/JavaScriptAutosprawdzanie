@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  W okrągłych nawiasach po nazwie funkcji deklarujemy parametry – zmienne dla których wartości (argumenty) podajemy przy
+  wywołaniu funkcji
+
+  Parametry - to lokalne zmienne dostępne tylko w obrębie danego wywołania funkcji (w kodzie znajdującym się w jej
+  ciele). Oddziela się je przecinkami. Parametrów może być kilka lub wcale może ich nie być – wtedy nawias okrągły
+  pozostawiamy pusty.
+
+  Przy wywołaniu funkcji, w okrągłym nawiasie można przekazać argumenty – wartości dla zadeklarowanych parametrów
+  funkcji.
+
+  // 1. Zadeklarowanie parametrów x, y, z
+  function multiply(x, y, z) {
+  console.log(`Rezultat mnożenia równy ${x * y * z}`);
+  }
+
+  // 2. Przekazanie argumentów
+  multiply(2, 3, 5); // Rezultat mnożenia równy 30
+  multiply(4, 8, 12); // Rezultat mnożenia równy 384
+  multiply(17, 6, 25); // Rezultat mnożenia równy 2550
+  Kolejność przekazywanych argumentów odpowiada porządkowi deklarowanych parametrów tzn. pierwszy argument dostępny
+  będzie jako wartość pierwszego parametru, drugi argument jako wartość drugiego parametru i tak dalej.
+
+
+  ZADANIE
+
+  Funkcja add powinna potrafić dodawać do siebie trzy podane argumenty i wypisywać wynik w konsoli. Dodaj do funkcji add
+  trzy parametry a, b i c które zostaną zsumowane w ciele funkcji i wypisane w konsoli
+
+  Uzupełnij console.log() tak, aby wypisał string "Addition result equals <result>", gdzie <result> to suma przekazanych
+      liczb. Użyj template literals (zapisu z grawisami)
+
+
+
+      TESTY
+
+      Zadeklarowano funkcję add(a, b, c)
+      Wywołanie add(15, 27, 10) wypisuje w konsoli "Addition result equals 52"
+      Wywołanie add(10, 20, 30) wypisuje w konsoli "Addition result equals 60"
+      Wywołanie add(5, 10, 15) wypisuje w konsoli "Addition result equals 30"
+
+      <script>
+        //KOD PRZED ZMIANĄ
+        // // Change code below this line
+        // function add() {
+        //   console.log();
+        //   // Change code above this line
+        // }
+
+        // add(15, 27, 10);
+        // add(10, 20, 30);
+        // add(5, 10, 15);
+
+
+        //KOD PO ZMIANIE
+        // Change code below this line
+        function add(a, b, c) {
+          console.log(`Addition result equals ${a + b + c}`);
+          // Change code above this line
+        }
+
+        add(15, 27, 10); // 52
+        add(10, 20, 30); // 60
+        add(5, 10, 15); // 30
+      </script>
+</body>
+
+</html>

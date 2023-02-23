@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  ZAMÓWIENIE PRODUKTU
+
+
+
+  ZADANIE
+
+  Nasz sklep sprzedający droidy naprawcze jest niemal gotowy do otwarcia. Musimy napisać kod który pozwoli je zamówić.
+  Zadeklaruj zmienne i przypisz im odpowiednie wartości:
+
+  Zdefiniuj zmienne wedle podanego wzoru: nazwaZmiennej = wartośćZmiennej - opisZmiennej
+
+  pricePerDroid = 800 - cena jednego droida"
+  orderedQuantity = 8 - liczba droidów w zamówieniu
+  deliveryFee = 80 - koszt dostawy
+  totalPrice - wyliczona całkowita kwota zamówienia do zapłaty, nie zapomnij uwzględnić kosztu wysyłki (niezależnego od
+  ilości kupowanych droidów) message - wiadomość o statusie zamówienia w formacie You ordered droids worth <totalPrice>
+    credits. Delivery (<deliveryFee> credits) is included in total price.
+
+
+      TESTY
+
+
+      Zadeklarowano zmienną orderedQuantity
+      Wartością zmiennej orderedQuantity jest liczba 6
+      Zadeklarowano zmienną pricePerDroid
+      Wartością zmiennej pricePerDroid jest liczba 800
+      Zadeklarowano zmienną deliveryFee
+      Wartością zmiennej deliveryFee jest liczba 50
+      Zadeklarowano zmienną totalPrice
+      Wartością zmiennej totalPrice jest liczba 4850
+      Zadeklarowano zmienną message
+
+
+      <script>
+        //ZAMÓWIENIE PRODUKTU
+
+        // Change code below this line
+        const pricePerDroid = 800;
+        const orderedQuantity = 6; // w zadaniu w wymaganiach w autosprawdzaniu jest 8, później wymagają 6
+        const deliveryFee = 50; // w zadaniu w wymaganiach jest 80, później wymagają 50
+        const totalPrice = (pricePerDroid * orderedQuantity) + deliveryFee;
+        const message = `You ordered droids worth ${totalPrice} credits. Delivery (${deliveryFee} credits) is included in total price.`;
+      </script>
+</body>
+
+</html>
